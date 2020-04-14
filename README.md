@@ -149,15 +149,17 @@ cd /var/www
 
 you can install wherever you want to install it
 
+1. sudo git clone https://github.com/faruqneo/OTP.git // just an example
+2. cd OTP/
+3. npm install
+4. touch .env
+
+and details on .env file
 
 ```
-1.  sudo git clone https://github.com/faruqneo/OTP.git // just an example
-2.  cd OTP/
-3.  sudo npm install
-4. add a .env file and add details
-
 STORES=YOUR_STORE_NAME
 SMS_API_KEY=YOUR_ID
+```
 
 5. go to sendSms method in smsController.js
 
@@ -171,7 +173,6 @@ pm2 start server/server.js
 in cluster mode:
 
 pm2 start server/server.js -i max
-```
 
 ## check if your app running
 ```
