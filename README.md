@@ -141,9 +141,9 @@ Job for nginx.service failed because the control process exited with error code.
 
 # node js project setup
 
-You can install wherever you want to install it
+You can install it by following commands.
 
-1. sudo git clone https://github.com/faruqneo/OTP.git // just an example
+1. sudo git clone https://github.com/faruqneo/OTP.git
 2. cd OTP/
 3. npm install
 4. touch .env
