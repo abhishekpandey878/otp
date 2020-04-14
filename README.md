@@ -67,7 +67,7 @@ Let nginx serve static files.
 > Note: In case of cod otp app, this is not needed. but you can always set this up
 
 ```
-root /var/www/codotp;
+root /var/www/OTP;
 ```
 
 4. Edit 'location /' block
@@ -99,7 +99,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
-        root /var/www/codotp;  # change it to where your static files are located
+        root /var/www/OTP;  # change it to where your static files are located
 
         # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;
