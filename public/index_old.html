@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Cod verification</title>
+</head>
+<body>
+
+    <form action="#">
+        <input type="text" name="number" id="number" placeholder="Your number">
+        <input type="submit" value="send otp" id="sendotp">
+    </form>
+
+    <form action="#">
+        <input type="text" name="otp" id="otp" placeholder="enter Your number">
+        <input type="submit" value="verify" id="verify">
+    </form>
+
+
+    <script>
+        $("#sendotp").click( function(e) {
+            e.preventDefault();
+            var number = "+91"+ $("#number").val();
+            // alert(number);
+
+            $.ajax({
+                type: "POST",
+                url: "/sms",
+                data: {
+                    "number": number
+                },
+                success: function(data){
+                    alert(data.msg);
+                },
+                error: function(){
+                    alert('an error occured!!');
+                },
+
+                dataType: 'json',
+                // contentType: "application/json"
+                // processData: false
+                });
+
+        }); 
+        
+        // verify otp
+        $("#verify").click( function(e) {
+            e.preventDefault();
+            var otp = $("#otp").val();
+            var number = "+91"+ $("#number").val();
+
+            $.ajax({
+                type: "POST",
+                url: "/verify",
+                data: {
+                    "number": number,
+                    "otp": otp
+                },
+                success: function(data){
+                    alert(data.msg);
+                },
+                error: function(){
+                    alert('an error occured');
+                },
+
+                dataType: 'json',
+                // contentType: "application/json"
+                // processData: false
+                });
+
+        }); 
+    </script>
+</body>
+</html>

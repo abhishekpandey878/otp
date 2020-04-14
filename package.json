@@ -1,0 +1,36 @@
+{
+  "name": "otp",
+  "version": "1.0.0",
+  "description": "it is a otp solution.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faruqneo/OTP.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mongodb",
+    "2factor",
+    "ngnix"
+  ],
+  "author": "FARUQ KHAN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faruqneo/OTP/issues"
+  },
+  "homepage": "https://github.com/faruqneo/OTP#readme",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.0.7",
+    "nonce": "^1.0.4",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.2"
+  }
+}
