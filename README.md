@@ -156,10 +156,8 @@ you can install wherever you want to install it
 3.  sudo npm install
 4. add a .env file and add details
 
+STORES=YOUR_STORE_NAME
 SMS_API_KEY=YOUR_ID
-DB=OTP
-TEMPLATE_NAME=SOMETEMPLATENAME
-APP_NAME=OTP
 
 5. go to sendSms method in smsController.js
 
