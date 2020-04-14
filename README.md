@@ -151,7 +151,7 @@ you can install wherever you want to install it
 
 
 ```
-1.  sudo git clone https://marmeto_ind@bitbucket.org/marmeto_ind/otpcod.git // just an example
+1.  sudo git clone https://github.com/faruqneo/OTP.git // just an example
 2.  cd OTP/
 3.  sudo npm install
 4. add a .env file and add details
