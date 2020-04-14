@@ -141,13 +141,7 @@ Job for nginx.service failed because the control process exited with error code.
 
 # node js project setup
 
-move to a directory
-
-```
-cd /var/www
-```
-
-you can install wherever you want to install it
+You can install wherever you want to install it
 
 1. sudo git clone https://github.com/faruqneo/OTP.git // just an example
 2. cd OTP/
@@ -182,7 +176,6 @@ pm2 monit
 or 
 pm2 status
 ```
-
 
 
 # Installing SSL (using certbot)
