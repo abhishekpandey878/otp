@@ -72,9 +72,14 @@ app.post('/api/otp/verify', smsController.verifyNumber);
 */
 // app.get('/otp-sms',isAdmin, smsController.getAllOtpSms);
 
-app.get('/', (req, res) => {
-    shopName = shopName.split(".")[0];
-    res.render('index.hbs', { shopName: shopName });
+app.get('/', async (req, res) => {
+    try {
+        shopName = shopName.split(".")[0];
+        res.render('index.hbs', { shopName: shopName });
+    } catch (error) {
+        console.log(error)
+    }
+
 });
 
 
