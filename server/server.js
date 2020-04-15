@@ -14,8 +14,6 @@ const dbUri = process.env.DB;
 let shopName = process.env.STORES;
 
 const app = express();
-app.set('trust proxy', 'loopback');
-
 
 app.use(function (req, res, next) {
 
