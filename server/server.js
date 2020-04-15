@@ -1,23 +1,20 @@
 const path = require("path");
-const http = require("http");
+const dotenv = require('dotenv').config();
+const querystring = require('querystring');
+const express = require("express");
+const hbs = require('hbs');
+const mongoose = require('mongoose');
+
 const publicPath = path.join(__dirname, '../public');
 const port = process.env.PORT || 8000;
-const dotenv = require('dotenv').config();
 
-const querystring = require('querystring');
-
-const express = require("express");
-
-const hbs = require('hbs');
-
-var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const dbUri = process.env.DB;
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let shopName = process.env.STORES;
 
-var app = express();
+const app = express();
 app.set('trust proxy', 'loopback');
 
 
@@ -41,10 +38,6 @@ app.use(function (req, res, next) {
 });
 
 app.set('view engine', 'hbs');
-
-// to use socket.io we need http server
-var server = http.createServer(app);
-// var io = socketIO(server);
 app.use(express.static(publicPath));
 
 
@@ -86,6 +79,6 @@ app.get('/', (req, res) => {
 });
 
 
-server.listen(8000, () => {
+app.listen(8000, () => {
     console.log(`server is running on port ${port}`);
 });
