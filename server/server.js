@@ -10,7 +10,6 @@ const port = process.env.PORT || 8000;
 
 mongoose.Promise = global.Promise;
 const dbUri = process.env.DB;
-mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let shopName = process.env.STORES;
 
@@ -80,5 +79,7 @@ app.get('/', (req, res) => {
 
 
 app.listen(8000, () => {
-    console.log(`server is running on port ${port}`);
+    mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(res => console.log(`server is running on port ${port}\nConnected with db.`))
+    .catch(err => console.log('Unable to connected with db.'))
 });
