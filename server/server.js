@@ -81,7 +81,7 @@ app.get('/', async (req, res) => {
 });
 
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
     mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(res => console.log(`server is running on port ${port}\nConnected with db.`))
         .catch(err => console.log('Unable to connected with db.'))
