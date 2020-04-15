@@ -3,8 +3,8 @@
 require('dotenv').config();
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-let databaseName = process.env.DB || 'ptron'
-mongoose.connect('mongodb://localhost:27017/'+databaseName);
+let databaseName = process.env.DB
+mongoose.connect(databaseName);
 var {OtpToken} = require('../models/otpToken');
 
 
