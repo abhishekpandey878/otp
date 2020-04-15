@@ -335,7 +335,7 @@ global error
 
 
 
-# Getting report from command line (Pending)
+<!-- # Getting report from command line (Pending)
 
 go to project root folder
 
@@ -373,4 +373,4 @@ Response:
 
 { _id: false, count: 656 } => 656 numbers were not verified
 
-{ _id: true, count: 1590 } => 1590 numbers got verified
+{ _id: true, count: 1590 } => 1590 numbers got verified -->
