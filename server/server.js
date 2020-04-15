@@ -12,8 +12,8 @@ const hbs = require('hbs');
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-let DB = process.env.DB || 'OTP';
-mongoose.connect('mongodb://localhost:27017/' + DB);
+const dbUri = process.env.DB;
+mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let shopName = process.env.STORES;
 

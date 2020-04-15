@@ -153,6 +153,7 @@ and details on .env file
 ```
 STORES=YOUR_STORE_NAME
 SMS_API_KEY=YOUR_ID
+DB=mongodb://localhost:27017/otp
 ```
 
 5. go to sendSms method in smsController.js
@@ -334,7 +335,7 @@ global error
 
 
 
-# Getting report from command line
+# Getting report from command line (Pending)
 
 go to project root folder
 
