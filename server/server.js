@@ -53,7 +53,7 @@ app.use((err, req, res, next) => {
     }
 
     res.status(500);
-    res.send(err);
+    res.json({ msg: "error", data: err });
 });
 
 // var {User} = require('./models/user');
@@ -80,6 +80,6 @@ app.get('/', (req, res) => {
 
 app.listen(8000, () => {
     mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(res => console.log(`server is running on port ${port}\nConnected with db.`))
-    .catch(err => console.log('Unable to connected with db.'))
+        .then(res => console.log(`server is running on port ${port}\nConnected with db.`))
+        .catch(err => console.log('Unable to connected with db.'))
 });

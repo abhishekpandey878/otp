@@ -1,8 +1,12 @@
 {
   "name": "otp",
-  "version": "1.0.0",
   "description": "it is a otp solution.",
   "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "node": "13.12.0",
+    "npm": "6.14.4"
+  },
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
