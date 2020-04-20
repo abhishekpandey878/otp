@@ -168,7 +168,7 @@ exports.sendSms = (req, res) => {
     
     // res.send(req.connection.remoteAddress);
     // return;
-    var otp = Math.floor((Math.random()*9999)+1111);
+    var otp = Math.floor(1000 + Math.random() * 9000);
     var api = `https://2factor.in/API/V1/${key}/SMS/${numberTo}/${otp}/OTP`;
     
     try{
